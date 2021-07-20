@@ -174,5 +174,9 @@ data/
 # models
 models/
 KoBERT/
+results/
+ensemble/
+Untitled Folder/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python,jupyternotebooks
