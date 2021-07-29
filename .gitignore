@@ -179,5 +179,8 @@ ensemble/
 Untitled Folder/
 data_out/
 bert_ckpt/
+runs/
+test-nli
+
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python,jupyternotebooks
