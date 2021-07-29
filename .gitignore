@@ -177,6 +177,8 @@ KoBERT/
 results/
 ensemble/
 Untitled Folder/
+runs/
+test-nli
 
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python,jupyternotebooks

@@ -24,20 +24,36 @@ dataset_test = nlp.data.TSVDataset("data/ratings_test.txt", field_indices=[1,2],
 tokenizer = get_tokenizer()
 tok = nlp.data.BERTSPTokenizer(tokenizer, vocab, lower=False)
 
+tokenizer = get_tokenizer()
+tok = nlp.data.BERTSPTokenizer(tokenizer, vocab, lower=False)
+
 class BERTDataset(Dataset):
-    def __init__(self, dataset, sent_idx, label_idx, bert_tokenizer, max_len,
+    def __init__(self, dataset, sent_key, label_key, bert_tokenizer, max_len,
                  pad, pair):
         transform = nlp.data.BERTSentenceTransform(
             bert_tokenizer, max_seq_length=max_len, pad=pad, pair=pair)
 
-        self.sentences = [transform([i[sent_idx]]) for i in dataset]
-        self.labels = [np.int32(i[label_idx]) for i in dataset]
+        self.sentences = [transform([i]) for i in dataset[sent_key]]
+        
+        if not label_key == None:
+            self.mode = "train"
+        else:
+            self.mode = "test"
+            
+        if self.mode == "train":
+            self.labels = [np.int32(i) for i in dataset[label_key]]
+        else:
+            self.labels = [np.int32(0) for i in dataset[sent_key]]
 
     def __getitem__(self, i):
-        return (self.sentences[i] + (self.labels[i], ))
+        if self.mode == "train":
+            return (self.sentences[i] + (self.labels[i], ))
+        else:
+            return self.sentences[i]
 
     def __len__(self):
         return (len(self.labels))
+
 
 ## Setting parameters
 max_len = 64
