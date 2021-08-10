@@ -181,6 +181,7 @@ data_out/
 bert_ckpt/
 runs/
 test-nli
+models/
 
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python,jupyternotebooks
