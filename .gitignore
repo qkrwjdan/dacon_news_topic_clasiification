@@ -182,6 +182,7 @@ bert_ckpt/
 runs/
 test-nli
 models/
+checkpoints/
 
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python,jupyternotebooks
