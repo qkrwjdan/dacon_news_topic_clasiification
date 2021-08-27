@@ -51,7 +51,7 @@
 
     Trainer API에서는 Hyperparameter를 찾는 기능을 제공합니다. 최적의 성능을 보이는 Hyper parameter를 찾을 수 있습니다. 
 
-4. **Load checkpoints** ❌
+4. **Load checkpoints** 
 
     학습된 모델을 불러와 다시 사용할 수 있습니다. 
 
@@ -74,7 +74,3 @@
 9. **Cross Validation**
 
     교차검증학습을 수행합니다. 
-
-10. **ensemble (Soft, Hard)** ❌
-
-    여러 모델을 합치는 ensemble을 사용합니다.
