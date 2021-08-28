@@ -2,8 +2,6 @@
 
 ## 월간 데이콘 17 | 자연어 | 분류 | KLUE | Accuracy
 
----
-
 [https://dacon.io/competitions/official/235747/overview/description](https://dacon.io/competitions/official/235747/overview/description)
 
 ## 개요
@@ -55,7 +53,7 @@
 
     학습된 모델을 불러와 다시 사용할 수 있습니다. 
 
-5. **lue/bert-base MLM Classification**
+5. **Klue/bert-base MLM Classification**
 
     BERT의 Pretrain에 사용된 방법인 MLM을 사용하여 Classification을 수행합니다. 
 
